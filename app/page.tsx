@@ -90,7 +90,8 @@ const AT = {
   },
 };
 
-export default function AttractMode({onTouch,lang="nl"}:{onTouch?:()=>void;lang?:Lang}){
+export default function AttractMode(){
+  const lang: Lang = "nl";
   const router=useRouter();
   const t=AT[lang]??AT.nl;
   const [progress,setProgress]=useState(0);
@@ -170,7 +171,7 @@ export default function AttractMode({onTouch,lang="nl"}:{onTouch?:()=>void;lang?
   const shipPos=getPoint(progress);
   const drawn=buildDrawn(progress);
   const isFading=phase==="fade";
-  const handleTouch=()=>{onTouch?.();router.push("/home");};
+  const handleTouch=()=>{router.push("/home");router.push("/home");};
 
   const EXPS=[
     {k:"#C8A85A",naam:t.exp1,jaar:t.jaar1},

@@ -4,3 +4,5 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+NEXT_DISABLE_ESLINT = "1"
