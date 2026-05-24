@@ -2290,41 +2290,41 @@ export default function AntarcticaMap(){
           background:"rgba(22,14,4,.97)",
           border:`1px solid ${exp.kleur}45`,
           borderRadius:32,
-          padding:"52px 64px 44px",
-          display:"flex",flexDirection:"column",alignItems:"center",gap:22,
-          width:"min(580px,88vw)",
+          padding:"36px 48px 30px",
+          display:"flex",flexDirection:"column",alignItems:"center",gap:16,
+          width:"min(520px,88vw)",
           boxShadow:`0 40px 100px rgba(0,0,0,.9),0 0 0 1px ${exp.kleur}12,0 0 120px ${exp.kleurGlow}`,
           position:"relative",
         }}>
           <div style={{position:"absolute",top:0,left:"20%",right:"20%",height:1,
             background:`linear-gradient(90deg,transparent,${exp.kleur},transparent)`}}/>
           <div style={{
-            width:88,height:88,borderRadius:"50%",
+            width:72,height:72,borderRadius:"50%",
             background:`linear-gradient(135deg,${exp.kleur}18,${exp.kleur}38)`,
             border:`2px solid ${exp.kleur}60`,
             display:"flex",alignItems:"center",justifyContent:"center",
-            fontSize:34,color:exp.kleur,
+            fontSize:28,color:exp.kleur,
             boxShadow:`0 0 50px ${exp.kleurGlow},0 0 0 12px ${exp.kleurDim}`,
           }}>▶</div>
-          <div style={{fontFamily:"'Playfair Display',serif",fontSize:30,fontWeight:900,
+          <div style={{fontFamily:"'Playfair Display',serif",fontSize:24,fontWeight:900,
             color:"#F5EDD5",letterSpacing:"-.01em",textAlign:"center",lineHeight:1.15}}>
             {t.titel}
           </div>
-          <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,
+          <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:11,
             color:`${exp.kleur}90`,letterSpacing:".2em",textTransform:"uppercase",
             textAlign:"center",marginTop:-12}}>
             {exp.titel} · {exp.periode}
           </div>
-          <p style={{fontSize:17,color:"rgba(225,205,155,.78)",lineHeight:1.85,
+          <p style={{fontSize:14,color:"rgba(225,205,155,.78)",lineHeight:1.80,
             textAlign:"center",fontStyle:"italic",margin:0}}>
             {samenvatting}
           </p>
-          <div style={{display:"flex",gap:28,paddingTop:16,paddingBottom:16,
+          <div style={{display:"flex",gap:20,paddingTop:12,paddingBottom:12,
             borderTop:`1px solid ${exp.kleur}15`,borderBottom:`1px solid ${exp.kleur}15`,
             width:"100%",justifyContent:"center"}}>
             {[{icon:"👆",txt:t.tipStop},{icon:"📂",txt:t.tipArchief},{icon:"👤",txt:t.tipCrew}].map((tip,i)=>(
               <div key={i} style={{display:"flex",alignItems:"center",gap:8,
-                fontFamily:"'JetBrains Mono',monospace",fontSize:14,
+                fontFamily:"'JetBrains Mono',monospace",fontSize:12,
                 color:"rgba(200,168,90,.55)",letterSpacing:".04em"}}>
                 <span style={{fontSize:17}}>{tip.icon}</span>{tip.txt}
               </div>
@@ -2334,10 +2334,10 @@ export default function AntarcticaMap(){
             <button
               onClick={()=>setShowToast(false)}
               style={{
-                flex:1,padding:"22px 16px",borderRadius:18,
+                flex:1,padding:"16px 14px",borderRadius:16,
                 border:`1px solid ${exp.kleur}30`,background:"transparent",
                 cursor:"pointer",outline:"none",
-                fontFamily:"'JetBrains Mono',monospace",fontSize:14,
+                fontFamily:"'JetBrains Mono',monospace",fontSize:12,
                 letterSpacing:".06em",textTransform:"uppercase",
                 color:`${exp.kleur}80`,transition:"all .22s",
               }}
@@ -2348,11 +2348,11 @@ export default function AntarcticaMap(){
             <button
               onClick={()=>{setIsPlaying(true);setShowToast(false);}}
               style={{
-                flex:2,padding:"26px 16px",borderRadius:20,
+                flex:2,padding:"18px 16px",borderRadius:18,
                 border:`3px solid ${exp.kleur}65`,
                 background:`linear-gradient(135deg,${exp.kleur}22,${exp.kleur}42)`,
                 cursor:"pointer",outline:"none",
-                fontFamily:"'Playfair Display',serif",fontSize:22,fontWeight:700,
+                fontFamily:"'Playfair Display',serif",fontSize:18,fontWeight:700,
                 color:"#F5EDD5",transition:"all .22s",
                 boxShadow:`0 8px 32px ${exp.kleurGlow}`,
               }}
@@ -2395,7 +2395,7 @@ export default function AntarcticaMap(){
         .gld{animation:gld 6s ease-in-out infinite}
         .mpanel{background:linear-gradient(160deg,rgba(242,228,190,.97) 0%,rgba(235,218,178,.99) 100%);border:1px solid rgba(180,145,60,.22);border-radius:18px;box-shadow:0 32px 80px rgba(0,0,0,.7),inset 0 1px 0 rgba(200,168,90,.08);backdrop-filter:blur(28px);position:relative;}
         .mpanel::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(160,120,40,.35),transparent)}
-        .stile{border-radius:14px;padding:16px 14px 14px;min-height:88px;border:1px solid rgba(139,74,16,.18);background:rgba(200,155,60,.08);transition:all .22s cubic-bezier(.4,0,.2,1);cursor:pointer;position:relative;overflow:hidden}
+        .stile{border-radius:12px;padding:12px 10px 10px;min-height:72px;border:1px solid rgba(139,74,16,.18);background:rgba(200,155,60,.08);transition:all .22s cubic-bezier(.4,0,.2,1);cursor:pointer;position:relative;overflow:hidden}
         .stile::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,168,90,.03),transparent);opacity:0;transition:opacity .22s}
         .stile:hover{border-color:rgba(139,74,16,.35);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
         .stile:hover::before{opacity:1}
@@ -2403,11 +2403,11 @@ export default function AntarcticaMap(){
         .stile[data-has-link="true"]{animation:stpulse 3s ease-in-out infinite}
         .krow{display:flex;align-items:flex-start;gap:14px;padding:14px 14px;border-radius:12px;min-height:52px;border:none;background:transparent;cursor:pointer;text-align:left;width:100%;transition:background .18s;outline:none;}
         .krow:hover{background:rgba(139,74,16,.10)}
-        .eb{flex:1;max-width:360px;display:flex;align-items:center;gap:14px;padding:16px 28px;border-radius:14px;cursor:pointer;text-align:left;transition:all .25s cubic-bezier(.4,0,.2,1);outline:none;border:1px solid rgba(200,168,90,.10);background:rgba(210,170,70,.12);min-height:62px;position:relative;overflow:hidden}
+        .eb{flex:1;max-width:360px;display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:14px;cursor:pointer;text-align:left;transition:all .25s cubic-bezier(.4,0,.2,1);outline:none;border:1px solid rgba(200,168,90,.10);background:rgba(210,170,70,.12);min-height:62px;position:relative;overflow:hidden}
         .eb::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:transparent;transition:background .25s}
         .eb:hover{transform:translateY(-3px);border-color:rgba(139,74,16,.25);box-shadow:0 12px 32px rgba(0,0,0,.35)}
         .eb.on{transform:translateY(-3px);background:rgba(210,175,80,.25)}
-        .pb{width:90px;height:90px;border-radius:50%;border:1px solid rgba(200,168,90,.20);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0;transition:all .22s;outline:none;position:relative}
+        .pb{width:70px;height:70px;border-radius:50%;border:1px solid rgba(200,168,90,.20);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0;transition:all .22s;outline:none;position:relative}
         .pb:hover{transform:scale(1.1)}
         .rb{width:40px;height:40px;border-radius:50%;border:1px solid rgba(200,168,90,.11);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;color:rgba(200,168,90,.3);transition:all .2s;outline:none;}
         .rb:hover{border-color:rgba(200,168,90,.25);color:#D8ECF8}
@@ -2516,32 +2516,32 @@ export default function AntarcticaMap(){
                 boxShadow:`0 4px 24px rgba(0,0,0,.5),0 0 0 1px ${exp.kleur}10`}}>
                 <div style={{width:7,height:7,borderRadius:"50%",background:exp.kleur,flexShrink:0,
                   boxShadow:`0 0 10px ${exp.kleur}`}} className="ping"/>
-                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:22,fontWeight:700,
+                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:18,fontWeight:700,
                   color:"#1E0E04",letterSpacing:".01em",whiteSpace:"nowrap"}}>{currentWP.label}</div>
-                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:15,
+                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,
                   color:"rgba(80,50,15,.65)",letterSpacing:".08em",whiteSpace:"nowrap"}}>{currentWP.date}</div>
               </div>
             </div>
           )}
 
           {/* ══ INFO CARD LINKS ══ */}
-          <div className="su" style={{position:"absolute",top:20,left:20,bottom:20,width:340,
-            padding:"22px 22px 18px",zIndex:10,overflowY:"scroll",overflowX:"hidden",
+          <div className="su" style={{position:"absolute",top:16,left:16,bottom:16,width:300,
+            padding:"18px 18px 14px",zIndex:10,overflowY:"scroll",overflowX:"hidden",
             scrollbarWidth:"thin",scrollbarColor:`${exp.kleur}50 rgba(200,168,90,.10)`,
             background:"linear-gradient(160deg,rgba(242,228,190,.97) 0%,rgba(235,218,178,.99) 100%)",
             border:"1px solid rgba(200,168,90,.16)",borderRadius:18,
             boxShadow:"0 32px 80px rgba(0,0,0,.7),inset 0 1px 0 rgba(200,168,90,.08)",
             backdropFilter:"blur(28px)"}}>
 
-            <div style={{display:"flex",alignItems:"center",gap:12,marginBottom:20,
-              paddingBottom:18,borderBottom:"1px solid rgba(200,168,90,.09)"}}>
+            <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:14,
+              paddingBottom:12,borderBottom:"1px solid rgba(200,168,90,.09)"}}>
               <div style={{display:"flex",gap:2,height:22,flexShrink:0}}>
                 {["#1A1A1A","#FDDA25","#EF3340"].map((c,i)=>(
                   <div key={i} style={{width:5,height:"100%",borderRadius:2,background:c}}/>
                 ))}
               </div>
               <div style={{flex:1}}>
-                <div style={{fontFamily:"'Playfair Display',serif",fontSize:19,fontWeight:700,
+                <div style={{fontFamily:"'Playfair Display',serif",fontSize:16,fontWeight:700,
                   color:"#1E0E04",letterSpacing:"-.01em",lineHeight:1.2}}>{t.titel}</div>
                 <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:7.5,
                   color:"rgba(50,28,8,.70)",letterSpacing:".18em",textTransform:"uppercase",marginTop:2}}>
@@ -2551,24 +2551,24 @@ export default function AntarcticaMap(){
             </div>
 
             <div style={{marginBottom:18}}>
-              <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:11,letterSpacing:".22em",
+              <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:10,letterSpacing:".20em",
                 textTransform:"uppercase",color:"#8B4A10",display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
                 <span style={{width:18,height:1,background:exp.kleur,opacity:.5,display:"inline-block"}}/>
                 {exp.periode}
               </div>
-              <div style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:900,
+              <div style={{fontFamily:"'Playfair Display',serif",fontSize:22,fontWeight:900,
                 color:"#1E0E04",lineHeight:1.0,marginBottom:10,letterSpacing:"-.02em"}}>{exp.titel}</div>
               <div onClick={()=>setDetail({type:"persoon",id:exp.persoonId})}
                 style={{display:"inline-flex",alignItems:"center",gap:6,
-                  fontFamily:"'JetBrains Mono',monospace",fontSize:15,color:"rgba(60,35,8,.75)",
-                  marginBottom:14,cursor:"pointer",borderBottom:"1px solid rgba(200,168,90,.10)",
+                  fontFamily:"'JetBrains Mono',monospace",fontSize:13,color:"rgba(60,35,8,.75)",
+                  marginBottom:10,cursor:"pointer",borderBottom:"1px solid rgba(200,168,90,.10)",
                   paddingBottom:3,transition:"color .2s"}}
                 onMouseEnter={e=>(e.currentTarget.style.color="#C8A85A")}
                 onMouseLeave={e=>(e.currentTarget.style.color="rgba(100,60,15,.75)")}>
                 <span style={{opacity:.5}}>👤</span> {exp.leider}
                 <span style={{opacity:.35,fontSize:14}}>›</span>
               </div>
-              <p style={{fontSize:18,color:"rgba(50,28,8,.80)",lineHeight:1.85,fontStyle:"italic"}}>
+              <p style={{fontSize:15,color:"rgba(50,28,8,.80)",lineHeight:1.85,fontStyle:"italic"}}>
                 {samenvatting}
               </p>
             </div>
@@ -2577,10 +2577,10 @@ export default function AntarcticaMap(){
               {exp.stats.map((s,i)=>(
                 <div key={i} className="stile" data-has-link={s.datapuntId?"true":"false"}
                   onClick={()=>{if(s.datapuntId)setDetail({type:"datapunt",id:s.datapuntId});}}>
-                  <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:30,fontWeight:600,
+                  <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:24,fontWeight:600,
                     lineHeight:1,color:"#8B4A10",textShadow:`0 0 22px ${exp.kleurGlow},0 0 44px ${exp.kleurGlow}`}}>
                     {s.value}</div>
-                  <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,marginTop:5,
+                  <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:11,marginTop:4,
                     letterSpacing:".09em",textTransform:"uppercase",color:"rgba(50,28,8,.78)"}}>{s.unit}</div>
                   <div style={{fontSize:14,color:"rgba(200,168,90,.55)",marginTop:5,fontStyle:"italic"}}>{s.label}</div>
                   {s.datapuntId&&(
@@ -2596,9 +2596,9 @@ export default function AntarcticaMap(){
             <div style={{display:"flex",flexDirection:"column",gap:6}}>
               <button onClick={openArchief}
                 style={{display:"flex",alignItems:"center",justifyContent:"center",gap:8,
-                  padding:"16px 18px",borderRadius:14,border:"1px solid rgba(139,74,16,.32)",
+                  padding:"12px 14px",borderRadius:12,border:"1px solid rgba(139,74,16,.32)",
                   background:"rgba(200,155,60,.12)",cursor:"pointer",fontFamily:"'JetBrains Mono',monospace",
-                  fontSize:17,letterSpacing:".08em",textTransform:"uppercase",
+                  fontSize:14,letterSpacing:".08em",textTransform:"uppercase",
                   color:"#8B4A10",transition:"all .22s",outline:"none"}}
                 onMouseEnter={e=>{e.currentTarget.style.background=`${exp.kleur}16`;e.currentTarget.style.color=exp.kleur;e.currentTarget.style.borderColor=`${exp.kleur}50`;}}
                 onMouseLeave={e=>{e.currentTarget.style.background=`${exp.kleur}08`;e.currentTarget.style.color=`${exp.kleur}70`;e.currentTarget.style.borderColor=`${exp.kleur}28`;}}>
@@ -2646,7 +2646,7 @@ export default function AntarcticaMap(){
           {/* ══ POSITIE CARD RECHTS ══ */}
           {sliderT>0&&(
             <div key={cardKey} className="mpanel sl"
-              style={{position:"absolute",top:20,right:20,width:290,padding:"20px 22px",zIndex:10,
+              style={{position:"absolute",top:20,right:20,width:260,padding:"16px 18px",zIndex:10,
                 maxHeight:"calc(100vh - 210px)",overflowY:"auto",overflowX:"hidden",
                 scrollbarWidth:"thin",scrollbarColor:`${exp.kleur}30 transparent`}}>
               <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:11,letterSpacing:".22em",
@@ -2654,7 +2654,7 @@ export default function AntarcticaMap(){
                 <span style={{width:12,height:1,background:exp.kleur,opacity:.5,display:"inline-block"}}/>
                 {t.huidigePositie}
               </div>
-              <div style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:700,
+              <div style={{fontFamily:"'Playfair Display',serif",fontSize:22,fontWeight:700,
                 color:"#1E0E04",lineHeight:1.1,marginBottom:8,letterSpacing:"-.01em"}}>{currentWP.label}</div>
               <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:15,
                 color:"rgba(50,28,8,.80)",marginBottom:14,display:"flex",alignItems:"center",gap:8}}>
@@ -2662,11 +2662,11 @@ export default function AntarcticaMap(){
                   display:"inline-block",boxShadow:`0 0 8px ${exp.kleur}`}}/>
                 {currentWP.date}
               </div>
-              <div style={{fontSize:17,color:"rgba(50,28,8,.78)",lineHeight:1.85,
+              <div style={{fontSize:14,color:"rgba(50,28,8,.78)",lineHeight:1.80,
                 borderLeft:`2px solid ${exp.kleur}60`,paddingLeft:14}}>{currentDesc}</div>
               {currentJournal&&(
                 <div style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",
-                  fontSize:16,color:"rgba(80,40,8,.75)",lineHeight:1.85,fontStyle:"italic",marginTop:14,paddingTop:14,
+                  fontSize:13,color:"rgba(80,40,8,.75)",lineHeight:1.80,fontStyle:"italic",marginTop:12,paddingTop:14,
                   borderTop:"1px solid rgba(139,74,16,.18)"}}>{currentJournal}</div>
               )}
             </div>
@@ -2674,11 +2674,11 @@ export default function AntarcticaMap(){
         </div>
 
         {/* ══ ROUTE PANEEL ══ */}
-        <aside style={{width:300,background:"rgba(235,218,178,.99)",borderLeft:"1px solid rgba(139,94,32,.25)",
+        <aside style={{width:260,background:"rgba(235,218,178,.99)",borderLeft:"1px solid rgba(139,94,32,.25)",
           display:"flex",flexDirection:"column",flexShrink:0,overflow:"hidden"}}>
           <div style={{padding:"18px 16px 14px",borderBottom:"1px solid rgba(139,74,16,.25)",
             flexShrink:0,background:"transparent"}}>
-            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,
+            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:11,
               color:"rgba(50,28,8,.80)",letterSpacing:".15em",textTransform:"uppercase",marginBottom:8}}>
               {t.expeditie}
             </div>
@@ -2687,7 +2687,7 @@ export default function AntarcticaMap(){
                 background:`linear-gradient(to right,${exp.kleur}50,${exp.kleur})`,
                 borderRadius:1,transition:"width .12s",boxShadow:`0 0 8px ${exp.kleur}`}}/>
             </div>
-            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:18,color:"#2A1408",letterSpacing:".04em"}}>
+            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:15,color:"#2A1408",letterSpacing:".04em"}}>
               {reachedWPs.length}<span style={{color:"rgba(50,28,8,.40)"}}> / {exp.waypoints.length}</span>
               <span style={{color:"rgba(50,28,8,.55)",marginLeft:8,fontSize:9}}>{t.stopsBereikt}</span>
             </div>
@@ -2699,19 +2699,19 @@ export default function AntarcticaMap(){
                 letterSpacing:".18em",textTransform:"uppercase",marginBottom:10,paddingLeft:2}}>{t.bemanning}</div>
               {PERSONEN.filter(p=>activeId==="belgica"?["degerlache","amundsen","cook"].includes(p.id):activeId==="boudewijn"?p.id==="gaston":p.id==="hubert").map(p=>(
                 <button key={p.id} onClick={()=>setDetail({type:"persoon",id:p.id})}
-                  style={{display:"flex",alignItems:"center",gap:10,width:"100%",padding:"16px 14px",
-                    borderRadius:14,border:"1px solid rgba(139,94,32,.22)",background:"transparent",
+                  style={{display:"flex",alignItems:"center",gap:10,width:"100%",padding:"10px 10px",
+                    borderRadius:12,border:"1px solid rgba(139,94,32,.22)",background:"transparent",
                     cursor:"pointer",transition:"all .18s",marginBottom:8,outline:"none"}}
                   onMouseEnter={e=>{e.currentTarget.style.background="rgba(200,168,90,.06)";e.currentTarget.style.borderColor="rgba(200,168,90,.16)"}}
                   onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.borderColor="rgba(200,168,90,.06)"}}>
-                  <div style={{width:44,height:44,borderRadius:"50%",flexShrink:0,overflow:"hidden",
+                  <div style={{width:36,height:36,borderRadius:"50%",flexShrink:0,overflow:"hidden",
                     background:`${exp.kleur}10`,border:"1.5px solid rgba(139,94,32,.35)"}}>
                     <img src={p.fotoUrl} alt={p.naam} style={{width:"100%",height:"100%",objectFit:"cover",objectPosition:"top"}}/>
                   </div>
                   <div style={{flex:1,minWidth:0,textAlign:"left"}}>
-                    <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:18,color:"#1E0E04",
+                    <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:15,color:"#1E0E04",
                       fontWeight:600,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{p.naam}</div>
-                    <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:14,color:"rgba(80,50,15,.60)",
+                    <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:12,color:"rgba(80,50,15,.60)",
                       marginTop:2,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{p.rol}</div>
                   </div>
                   <span style={{color:"rgba(50,28,8,.40)",fontSize:13,flexShrink:0}}>›</span>
@@ -2760,7 +2760,7 @@ export default function AntarcticaMap(){
                     {/* Stop naam */}
                     <div style={{
                       fontFamily:"'Playfair Display',serif",
-                      fontSize:isCurr?20:16,
+                      fontSize:isCurr?16:13,
                       fontWeight:isCurr?900:600,
                       color:isCurr?exp.kleur:"#2A1408",
                       lineHeight:1.2,transition:"all .25s",
@@ -2769,7 +2769,7 @@ export default function AntarcticaMap(){
                     {/* Datum */}
                     <div style={{
                       fontFamily:"'JetBrains Mono',monospace",
-                      fontSize:12,
+                      fontSize:11,
                       color:"rgba(50,28,8,.60)",
                       letterSpacing:".06em",
                       marginBottom:isCurr?10:0,
@@ -2782,9 +2782,9 @@ export default function AntarcticaMap(){
                         borderLeft:`3px solid ${exp.kleur}`,
                         borderRadius:"0 10px 10px 0",
                         padding:"10px 12px",
-                        fontSize:14,
+                        fontSize:12,
                         color:"rgba(40,20,5,.80)",
-                        lineHeight:1.75,
+                        lineHeight:1.70,
                         fontStyle:"italic",
                       }}>
                         {desc?.desc??wp.desc}
@@ -2805,11 +2805,11 @@ export default function AntarcticaMap(){
             background:"linear-gradient(90deg,transparent,rgba(200,148,58,.14),transparent)"}}/>
           {/* Taal selector */}
           <div style={{position:"absolute",left:28,display:"flex",gap:4,alignItems:"center"}}>
-            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:14,color:"rgba(80,50,15,.60)",
+            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:12,color:"rgba(80,50,15,.60)",
               letterSpacing:".15em",textTransform:"uppercase",marginRight:6}}>{t.taalKiezen}</div>
             {(["nl","en","fr"] as Lang[]).map(l=>(
               <button key={l} onClick={()=>setLang(l)}
-                style={{padding:"10px 18px",borderRadius:10,minHeight:"52px",
+                style={{padding:"7px 14px",borderRadius:8,minHeight:"40px",
                   border:`1px solid ${lang===l?"rgba(200,168,90,.4)":"rgba(200,168,90,.1)"}`,
                   background:lang===l?"rgba(200,168,90,.12)":"transparent",
                   cursor:"pointer",fontFamily:"'JetBrains Mono',monospace",fontSize:15,
@@ -2828,9 +2828,9 @@ export default function AntarcticaMap(){
               <div style={{width:10,height:10,borderRadius:"50%",background:e.kleur,flexShrink:0,
                 boxShadow:activeId===e.id?`0 0 12px ${e.kleur},0 0 0 4px ${e.kleurDim}`:"none",transition:"box-shadow .3s"}}/>
               <div style={{flex:1}}>
-                <div style={{fontFamily:"'Playfair Display',serif",fontSize:17,fontWeight:700,
+                <div style={{fontFamily:"'Playfair Display',serif",fontSize:14,fontWeight:700,
                   color:activeId===e.id?"#8B4A10":"rgba(50,28,8,.78)",lineHeight:1.2,letterSpacing:"-.01em"}}>{e.titel}</div>
-                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:14,
+                <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:12,
                   color:"rgba(50,28,8,.72)",marginTop:2,letterSpacing:".05em"}}>{e.periode}</div>
               </div>
               {activeId===e.id&&(
@@ -2843,9 +2843,9 @@ export default function AntarcticaMap(){
 
         <div style={{padding:"14px 28px 22px"}}>
           <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10}}>
-            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:15,letterSpacing:".18em",
+            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:12,letterSpacing:".18em",
               textTransform:"uppercase",color:"rgba(50,28,8,.80)"}}>{t.tijdlijn}</div>
-            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:16,padding:"10px 22px",borderRadius:20,
+            <div style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,padding:"8px 18px",borderRadius:20,
               border:`1px solid ${exp.kleur}40`,background:"rgba(200,155,60,.20)",color:"#6B3A08",letterSpacing:".05em"}}>
               {sliderT===0?t.beginnen:sliderT>=1?t.voltooid:currentWP.date+" · "+currentWP.label}
             </div>
@@ -2867,7 +2867,7 @@ export default function AntarcticaMap(){
 
           <div style={{display:"flex",alignItems:"center",gap:12}}>
             <button onClick={()=>{setSliderT(0);setIsPlaying(false);}}
-              style={{display:"flex",alignItems:"center",gap:6,padding:"22px 36px",borderRadius:16,minHeight:"72px",
+              style={{display:"flex",alignItems:"center",gap:6,padding:"14px 24px",borderRadius:14,minHeight:"54px",
                 border:"1px solid rgba(200,168,90,.2)",background:"transparent",cursor:"pointer",outline:"none",
                 fontFamily:"'JetBrains Mono',monospace",fontSize:14,color:"rgba(80,50,15,.60)",
                 letterSpacing:".08em",transition:"all .18s"}}
