@@ -2666,7 +2666,7 @@ export default function AntarcticaMap(){
                 borderLeft:`2px solid ${exp.kleur}60`,paddingLeft:14}}>{currentDesc}</div>
               {currentJournal&&(
                 <div style={{fontFamily:"'Playfair Display',serif",fontStyle:"italic",
-                  fontSize:13,color:"rgba(80,40,8,.75)",lineHeight:1.80,fontStyle:"italic",marginTop:12,paddingTop:14,
+                  fontSize:13,color:"rgba(80,40,8,.75)",lineHeight:1.80,marginTop:12,paddingTop:14,
                   borderTop:"1px solid rgba(139,74,16,.18)"}}>{currentJournal}</div>
               )}
             </div>
